@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Collina Pre-Cooked Beans | Kuriotes Investments Ltd.</title>
+    <meta name="description" content="Collina Pre-Cooked Beans. Already cooked, saving you hours in the kitchen. 100% Natural, no preservatives. Rich in proteins and fibre proudly served to you by Kuriotes Investments Limited.">
+    <meta name="keywords" content="Pre-cooked beans, Collina beans, Uganda, Kuriotes Investments, Ready to eat, Natural beans">
+    <meta name="author" content="Kuriotes Investments Ltd.">
+    <meta name="robots" content="index, follow">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        collina: {
+                            dark: '#0f3f26',     // Deep green background fitting the brand
+                            surface: '#185c39',  // Lighter green for UI cards
+                            red: '#dc2626',      // Collina Red
+                            green: '#22c55e',    // Collina vibrant green
+                            yellow: '#facc15',   // Yellow accent from the flyer badge
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'], 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(24, 92, 57, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+            backdrop-filter: blur(5px);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .fade-up { animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(20px); }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        img { transition: opacity 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-collina-dark text-white font-sans min-h-screen flex flex-col selection:bg-collina-red selection:text-white overflow-x-hidden">
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-collina-red/10 rounded-full blur-[100px] mix-blend-screen"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-collina-yellow/10 rounded-full blur-[120px] mix-blend-screen"></div>
+    </div>
+
+    <header class="fixed top-0 w-full z-40 px-6 py-4 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto glass rounded-full px-6 py-3 flex justify-between items-center shadow-lg shadow-black/10">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-collina-green/50">
+                    <i class="fa-solid fa-leaf text-collina-green text-xl"></i>
+                </div>
+                <div class="leading-none sm:block">
+                    <span class="block text-sm font-bold tracking-widest text-white uppercase">COLLINA</span>
+                    <span class="block text-[10px] text-collina-yellow tracking-[0.1em] font-medium uppercase">Kuriotes Investments</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <button onclick="switchView('home')" class="hover:text-collina-yellow transition-colors">Home</button>
+                <button onclick="switchView('facts')" class="hover:text-collina-yellow transition-colors">Nutrition Facts</button>
+                <a href="https://wa.me/256782205952" class="bg-collina-red hover:bg-red-600 text-white px-5 py-2 rounded-full transition-all shadow-lg shadow-red-500/30">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 pt-28 pb-32 px-4 md:px-8 max-w-7xl mx-auto w-full">
+        
+        <section id="view-home" class="space-y-12">
+            
+            <div class="fade-up">
+                <div class="relative rounded-3xl overflow-hidden bg-collina-surface border border-white/5 shadow-2xl min-h-[400px] md:h-[450px] flex flex-col md:flex-row items-center">
+                    <div class="p-8 md:p-12 md:w-1/2 z-10 flex flex-col items-start justify-center h-full">
+                        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-collina-red/20 text-red-300 text-[10px] font-bold tracking-wider mb-4 border border-collina-red/20">
+                            <span class="w-1.5 h-1.5 rounded-full bg-collina-red animate-pulse"></span>
+                            MORE FLAVOUR, LESS COOKING
+                        </span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-4">
+                            Pre-Cooked <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-collina-green to-collina-yellow">Beans</span>
+                        </h1>
+                        <p class="text-gray-300 text-sm md:text-base mb-8 max-w-md leading-relaxed">
+                            Already cooked, saving you hours in the kitchen. 100% Natural, no preservatives. Rich in proteins and fibre, great for the whole family!
+                        </p>
+                        <div class="flex gap-4">
+                            <button onclick="document.getElementById('products-grid').scrollIntoView({behavior: 'smooth'})" class="bg-collina-red text-white px-8 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform shadow-[0_0_20px_rgba(220,38,38,0.3)]">
+                                View Sizes
+                            </button>
+                            <button onclick="switchView('facts')" class="px-6 py-3 rounded-full font-medium text-sm text-white border border-white/10 hover:bg-white/5 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-seedling text-collina-green"></i> Nutrition
+                            </button>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full h-64 md:h-full relative overflow-hidden bg-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-collina-surface via-transparent to-transparent z-10"></div>
+                        <img src="hero.jpg" class="w-full h-full object-contain object-center transform hover:scale-105 transition-transform duration-700 p-4" alt="Collina Beans Assortment">
+                    </div>
+                </div>
+            </div>
+
+            <div id="products-grid" class="fade-up delay-100">
+                <div class="flex justify-between items-end mb-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">Available Packages</h2>
+                        <p class="text-gray-400 text-xs mt-1">Different sizes to suit your family's needs</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <article onclick="openProduct(0)" class="group glass-card rounded-2xl p-3 cursor-pointer relative hover:-translate-y-2 transition-transform duration-300">
+                        <div class="absolute top-3 left-3 z-10 bg-green-500/20 text-green-400 border border-green-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-sm">READY TO USE</div>
+                        <div class="aspect-[4/5] bg-white/10 rounded-xl mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="5.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-500" alt="Collina Beans">
+                            <button class="absolute bottom-3 right-3 w-8 h-8 bg-collina-red rounded-full flex items-center justify-center text-white shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-bold text-base truncate">Standard Pouch (Red)</h3>
+                        <p class="text-xs text-gray-400 mb-2">100g</p>
+                        <div class="flex items-center gap-2">
+                            <span class="text-collina-yellow font-bold">UGX 3,500</span>
+                        </div>
+                    </article>
+
+                    <article onclick="openProduct(1)" class="group glass-card rounded-2xl p-3 cursor-pointer relative hover:-translate-y-2 transition-transform duration-300">
+                        <div class="absolute top-3 left-3 z-10 bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-sm">FAMILY FAVORITE</div>
+                        <div class="aspect-[4/5] bg-white/10 rounded-xl mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="20.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-500" alt="Collina Beans">
+                            <button class="absolute bottom-3 right-3 w-8 h-8 bg-collina-red rounded-full flex items-center justify-center text-white shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-bold text-base truncate">Premium Pouch (Gold)</h3>
+                        <p class="text-xs text-gray-400 mb-2">250g</p>
+                        <div class="flex items-center gap-2">
+                            <span class="text-collina-yellow font-bold">UGX 7,000</span>
+                        </div>
+                    </article>
+
+                    <article onclick="openProduct(2)" class="group glass-card rounded-2xl p-3 cursor-pointer relative hover:-translate-y-2 transition-transform duration-300">
+                        <div class="aspect-[4/5] bg-white/10 rounded-xl mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="30.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-500" alt="Collina Beans">
+                            <button class="absolute bottom-3 right-3 w-8 h-8 bg-collina-red rounded-full flex items-center justify-center text-white shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-bold text-base truncate">Economy Pouch (Green)</h3>
+                        <p class="text-xs text-gray-400 mb-2">500g</p>
+                        <div class="flex items-center gap-2">
+                            <span class="text-collina-yellow font-bold">UGX 15,000</span>
+                        </div>
+                    </article>
+                    
+                     <article onclick="openProduct(3)" class="group glass-card rounded-2xl p-3 cursor-pointer relative hover:-translate-y-2 transition-transform duration-300">
+                        <div class="absolute top-3 left-3 z-10 bg-red-500/20 text-red-400 border border-red-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-sm">BULK SIZE</div>
+                        <div class="aspect-[4/5] bg-white/10 rounded-xl mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="4.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-500" alt="Collina Beans">
+                            <button class="absolute bottom-3 right-3 w-8 h-8 bg-collina-red rounded-full flex items-center justify-center text-white shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-bold text-base truncate">Family Multi-Pack</h3>
+                        <p class="text-xs text-gray-400 mb-2">1kg</p>
+                        <div class="flex items-center gap-2">
+                            <span class="text-collina-yellow font-bold">UGX 30,000</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/5 fade-up delay-200">
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-clock text-2xl text-collina-yellow mb-2"></i>
+                    <p class="text-xs font-bold text-gray-300">Saves Time</p>
+                </div>
+                <div class="text-center p-4 border-l border-r border-white/5">
+                    <i class="fa-solid fa-leaf text-2xl text-collina-green mb-2"></i>
+                    <p class="text-xs font-bold text-gray-300">100% Natural</p>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-dumbbell text-2xl text-collina-red mb-2"></i>
+                    <p class="text-xs font-bold text-gray-300">High Protein</p>
+                </div>
+            </div>
+
+            <footer class="mt-12 border-t border-white/5 pt-10 fade-up delay-200">
+                <div class="glass-card rounded-3xl p-8 text-center relative overflow-hidden">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-collina-red/5 rounded-full blur-3xl pointer-events-none"></div>
+                    
+                    <h2 class="text-2xl font-bold mb-2 relative z-10 text-white">Contact Us</h2>
+                    <p class="text-gray-400 text-sm mb-6 relative z-10">Kuriotes Investments Ltd. <br> Ndundu Complex, Level 1 Room 1, Kisaasi Kyanja Road</p>
+                    
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-10 relative z-10">
+                        <a href="tel:+256782205952" class="group flex flex-col items-center gap-3">
+                            <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-collina-green transition-all duration-300 shadow-lg group-hover:-translate-y-2">
+                                <i class="fa-solid fa-phone text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">+256 782 205 952</span>
+                        </a>
+                        <a href="https://wa.me/256705007339" class="group flex flex-col items-center gap-3">
+                            <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#25D366] transition-all duration-300 shadow-lg group-hover:-translate-y-2">
+                                <i class="fa-brands fa-whatsapp text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">+256 705 007 339</span>
+                        </a>
+                        <a href="mailto:kuriotesinvestments@gmail.com" class="group flex flex-col items-center gap-3">
+                            <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-collina-red transition-all duration-300 shadow-lg group-hover:-translate-y-2">
+                                <i class="fa-solid fa-envelope text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <span class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">Email Us</span>
+                        </a>
+                    </div>
+                    <div class="mt-8 text-[10px] text-gray-500 uppercase tracking-widest">
+                        &copy; 2026 Kuriotes Investments Ltd. All rights reserved.
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <section id="view-facts" class="hidden space-y-8 fade-up">
+            <div class="text-center mb-8">
+                <span class="text-collina-green text-xs font-bold tracking-widest uppercase">Healthy Eating</span>
+                <h2 class="text-3xl font-bold mt-2">Nutritional <span class="text-collina-yellow">Breakdown</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card rounded-3xl p-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-collina-green/10 rounded-bl-full"></div>
+                    <h3 class="text-sm font-bold mb-6 flex items-center gap-2">
+                        <span class="w-2 h-6 bg-collina-red rounded-full"></span> Bean Macronutrients
+                    </h3>
+                    <div class="h-64 relative flex justify-center">
+                        <canvas id="macroChart"></canvas>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none flex-col">
+                            <span class="text-2xl font-bold text-white">100%</span>
+                            <span class="text-[10px] text-gray-400">NATURAL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-3xl p-6">
+                    <h3 class="text-sm font-bold mb-6 flex items-center gap-2">
+                        <span class="w-2 h-6 bg-collina-yellow rounded-full"></span> Key Minerals & Fibres
+                    </h3>
+                    <div class="h-64 relative">
+                        <canvas id="mineralChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-collina-surface to-collina-dark rounded-2xl p-6 border border-collina-green/20 relative overflow-hidden">
+                <i class="fa-solid fa-heart-pulse absolute top-4 right-4 text-collina-red/30 text-4xl"></i>
+                <h4 class="text-lg font-bold text-collina-green mb-2">Why Collina Pre-Cooked Beans?</h4>
+                <p class="text-sm text-gray-300 leading-relaxed relative z-10">
+                    They are already cooked, saving you hours in the kitchen! Our beans are 100% natural with no preservatives. Rich in proteins and dietary fibre, they make a great, wholesome meal for the entire family.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <nav class="md:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] max-w-sm z-50">
+        <div class="glass rounded-full px-6 py-4 flex justify-between items-center shadow-2xl shadow-black/50">
+            <button onclick="switchView('home')" id="nav-home" class="flex flex-col items-center text-collina-yellow w-12 transition-all hover:scale-110">
+                <i class="fa-solid fa-house text-lg mb-1"></i>
+            </button>
+            <button onclick="switchView('facts')" id="nav-facts" class="flex flex-col items-center text-white/50 hover:text-white transition-all w-12 hover:scale-110">
+                <i class="fa-solid fa-seedling text-lg mb-1"></i>
+            </button>
+            <div class="w-px h-8 bg-white/10"></div>
+            <a href="https://wa.me/256782205952" class="flex flex-col items-center text-white/50 hover:text-green-400 transition-all w-12 hover:scale-110">
+                <i class="fa-brands fa-whatsapp text-xl mb-1"></i>
+            </a>
+            <a href="tel:+256782205952" class="flex flex-col items-center text-white/50 hover:text-blue-400 transition-all w-12 hover:scale-110">
+                <i class="fa-solid fa-phone text-lg mb-1"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div id="product-modal" class="fixed inset-0 z-50 hidden" aria-modal="true">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 opacity-0" id="modal-backdrop" onclick="closeModal()"></div>
+        
+        <div class="absolute bottom-0 md:top-1/2 md:left-1/2 md:bottom-auto md:-translate-x-1/2 md:-translate-y-1/2 w-full md:w-[800px] h-[85vh] md:h-auto bg-collina-surface md:rounded-3xl rounded-t-3xl shadow-2xl transform transition-transform duration-300 translate-y-full md:translate-y-10 scale-95 opacity-0 flex flex-col md:flex-row overflow-hidden border border-white/10" id="modal-panel">
+            
+            <div class="relative h-64 md:h-auto md:w-5/12 bg-white/10 flex items-center justify-center p-4">
+                <img id="modal-img" src="" alt="Product" class="max-w-full max-h-full object-contain drop-shadow-2xl">
+                <button onclick="closeModal()" class="absolute top-4 right-4 md:hidden z-20 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="flex-1 p-6 md:p-10 flex flex-col h-full overflow-y-auto no-scrollbar">
+                <div class="flex justify-between items-start mb-2">
+                    <span id="modal-tag" class="text-[10px] font-bold tracking-widest bg-collina-red text-white px-2 py-1 rounded">READY TO USE</span>
+                    <button onclick="closeModal()" class="hidden md:flex text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+                
+                <h2 id="modal-title" class="text-2xl md:text-3xl font-bold text-white mb-1">Product Title</h2>
+                <p id="modal-tagline" class="text-collina-yellow text-sm mb-6 font-medium">More Flavour, Less Cooking</p>
+                
+                <div class="grid grid-cols-3 gap-3 mb-6">
+                    <div class="bg-white/5 rounded-xl p-3 text-center border border-white/5">
+                        <i class="fa-solid fa-clock text-collina-yellow mb-1 text-sm"></i>
+                        <p id="stat-1" class="text-[11px] font-bold text-gray-200">Zero Prep Time</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3 text-center border border-white/5">
+                        <i class="fa-solid fa-leaf text-collina-green mb-1 text-sm"></i>
+                        <p id="stat-2" class="text-[11px] font-bold text-gray-200">100% Natural</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3 text-center border border-white/5">
+                        <i class="fa-solid fa-dumbbell text-collina-red mb-1 text-sm"></i>
+                        <p id="stat-3" class="text-[11px] font-bold text-gray-200">High Protein</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 mb-8 text-sm text-gray-300 leading-relaxed">
+                    <div>
+                        <h3 class="text-white font-bold mb-1">Description</h3>
+                        <p id="modal-desc">Description text...</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-1">Ingredients</h3>
+                        <p id="modal-ingredients" class="text-xs text-gray-400">List...</p>
+                    </div>
+                </div>
+                
+                <div class="mt-auto flex gap-4">
+                    <a href="https://wa.me/256782205952" class="flex-1 bg-gradient-to-r from-collina-green to-green-500 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all transform hover:-translate-y-1">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data Store
+        const products = [
+            {
+                title: "Collina Red Pouch",
+                tagline: "More Flavour, Less Cooking",
+                tag: "READY TO USE",
+                image: "1.jpg",
+                stats: ["Zero Prep Time", "100% Natural", "High Protein"],
+                desc: "Our standard pre-cooked beans in the vibrant red pouch. They are already cooked, saving you hours in the kitchen. Great for the whole family.",
+                ingredients: "Premium Beans, Water, Salt. (No preservatives added)."
+            },
+            {
+                title: "Collina Gold Pouch",
+                tagline: "Premium Pre-Cooked",
+                tag: "FAMILY FAVORITE",
+                image: "2.jpg",
+                stats: ["Zero Prep Time", "100% Natural", "Rich Fibre"],
+                desc: "Packed with flavor, our gold pouch variant provides the ultimate convenience for large meals. 100% natural goodness ready to be served.",
+                ingredients: "Premium Beans, Water, Salt. (No preservatives added)."
+            },
+            {
+                title: "Collina Green Pouch",
+                tagline: "Economy Pack",
+                tag: "HIGH PROTEIN",
+                image: "3.jpg",
+                stats: ["Zero Prep Time", "100% Natural", "High Protein"],
+                desc: "A rich source of proteins and fibre, sealed in our green pouch for maximum freshness without any chemical preservatives.",
+                ingredients: "Premium Beans, Water, Salt. (No preservatives added)."
+            },
+            {
+                title: "Family Multi-Pack",
+                tagline: "Assorted Sizes",
+                tag: "BULK",
+                image: "4.jpg",
+                stats: ["Bulk Savings", "100% Natural", "Various"],
+                desc: "Get all your favorite variants and sizes in one go. Keep your pantry stocked and save hours of kitchen preparation.",
+                ingredients: "Assortment of Premium Beans, Water, Salt."
+            }
+        ];
+
+        // Chart Setup
+        Chart.defaults.color = '#9ca3af';
+        Chart.defaults.font.family = 'Outfit';
+        Chart.defaults.scale.grid.color = 'rgba(255,255,255,0.03)';
+        
+        let macroChartInstance = null;
+        let mineralChartInstance = null;
+
+        function initCharts() {
+            const ctxMacro = document.getElementById('macroChart').getContext('2d');
+            const ctxMineral = document.getElementById('mineralChart').getContext('2d');
+            
+            if (macroChartInstance) macroChartInstance.destroy();
+            if (mineralChartInstance) mineralChartInstance.destroy();
+            
+            // Doughnut Chart (Macros for Beans)
+            macroChartInstance = new Chart(ctxMacro, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Complex Carbs', 'Protein', 'Dietary Fibre', 'Fats'],
+                    datasets: [{
+                        data: [60, 24, 15, 1],
+                        backgroundColor: ['#facc15', '#dc2626', '#22c55e', '#ffffff'],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    cutout: '75%', 
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            // Bar Chart (Minerals for Beans)
+            mineralChartInstance = new Chart(ctxMineral, {
+                type: 'bar',
+                data: {
+                    labels: ['Potassium', 'Iron', 'Magnesium'],
+                    datasets: [{
+                        label: 'Nutrient Value',
+                        data: [400, 15, 60],
+                        backgroundColor: '#22c55e',
+                        borderRadius: 6,
+                        barThickness: 20
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, grid: { display: true } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        // View Navigation Logic
+        function switchView(viewName) {
+            const homeView = document.getElementById('view-home');
+            const factsView = document.getElementById('view-facts');
+            const navHome = document.getElementById('nav-home');
+            const navFacts = document.getElementById('nav-facts');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            if(viewName === 'home') {
+                homeView.classList.remove('hidden');
+                factsView.classList.add('hidden');
+                navHome.className = "flex flex-col items-center text-collina-yellow w-12 transition-all scale-110";
+                navFacts.className = "flex flex-col items-center text-white/50 hover:text-white transition-all w-12";
+            } else {
+                homeView.classList.add('hidden');
+                factsView.classList.remove('hidden');
+                navFacts.className = "flex flex-col items-center text-collina-yellow w-12 transition-all scale-110";
+                navHome.className = "flex flex-col items-center text-white/50 hover:text-white transition-all w-12";
+                
+                if(!macroChartInstance) initCharts();
+            }
+        }
+
+        // Modal Logic 
+        const modal = document.getElementById('product-modal');
+        const backdrop = document.getElementById('modal-backdrop');
+        const panel = document.getElementById('modal-panel');
+
+        function openProduct(index) {
+            const p = products[index] || products[0]; 
+            
+            document.getElementById('modal-title').innerText = p.title;
+            document.getElementById('modal-tagline').innerText = p.tagline;
+            document.getElementById('modal-tag').innerText = p.tag;
+            document.getElementById('modal-img').src = p.image;
+            document.getElementById('modal-desc').innerText = p.desc;
+            document.getElementById('modal-ingredients').innerText = p.ingredients;
+            document.getElementById('stat-1').innerText = p.stats[0];
+            document.getElementById('stat-2').innerText = p.stats[1];
+            document.getElementById('stat-3').innerText = p.stats[2];
+            
+            modal.classList.remove('hidden');
+            
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                panel.classList.remove('translate-y-full', 'scale-95', 'opacity-0');
+                panel.classList.remove('md:translate-y-10');
+            }, 10);
+        }
+
+        function closeModal() {
+            backdrop.classList.add('opacity-0');
+            panel.classList.add('translate-y-full', 'scale-95', 'opacity-0', 'md:translate-y-10');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
