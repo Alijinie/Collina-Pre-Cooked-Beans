@@ -160,6 +160,7 @@
                     </article>
 
                     <article onclick="openProduct(2)" class="group glass-card rounded-2xl p-3 cursor-pointer relative hover:-translate-y-2 transition-transform duration-300">
+                        <div class="absolute top-3 left-3 z-10 bg-green-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-md">READY TO SERVE</div>
                         <div class="aspect-[4/5] bg-white/10 rounded-xl mb-4 overflow-hidden relative flex items-center justify-center p-2">
                             <img src="30.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-500" alt="Collina Beans">
                             <button class="absolute bottom-3 right-3 w-8 h-8 bg-collina-red rounded-full flex items-center justify-center text-white shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
@@ -174,7 +175,7 @@
                     </article>
                     
                      <article onclick="openProduct(3)" class="group glass-card rounded-2xl p-3 cursor-pointer relative hover:-translate-y-2 transition-transform duration-300">
-                        <div class="absolute top-3 left-3 z-10 bg-red-500/20 text-red-400 border border-red-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-sm">BULK SIZE</div>
+                        <div class="absolute top-3 left-3 z-10 bg-collina-green text-white text-[10px] font-bold px-2 py-0.5 rounded-md">BULK SIZE</div>
                         <div class="aspect-[4/5] bg-white/10 rounded-xl mb-4 overflow-hidden relative flex items-center justify-center p-2">
                             <img src="4.jpg" class="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform duration-500" alt="Collina Beans">
                             <button class="absolute bottom-3 right-3 w-8 h-8 bg-collina-red rounded-full flex items-center justify-center text-white shadow-lg opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
@@ -206,37 +207,44 @@
             </div>
 
             <footer class="mt-12 border-t border-white/5 pt-10 fade-up delay-200">
-                <div class="glass-card rounded-3xl p-8 text-center relative overflow-hidden">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-collina-red/5 rounded-full blur-3xl pointer-events-none"></div>
-                    
-                    <h2 class="text-2xl font-bold mb-2 relative z-10 text-white">Contact Us</h2>
-                    <p class="text-gray-400 text-sm mb-6 relative z-10">Kuriotes Investments Ltd. <br> Ndundu Complex, Level 1 Room 1, Kisaasi Kyanja Road</p>
-                    
-                    <div class="flex flex-wrap justify-center gap-6 md:gap-10 relative z-10">
-                        <a href="tel:+256782205952" class="group flex flex-col items-center gap-3">
-                            <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-collina-green transition-all duration-300 shadow-lg group-hover:-translate-y-2">
-                                <i class="fa-solid fa-phone text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
-                            </div>
-                            <span class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">+256 782 205 952</span>
-                        </a>
-                        <a href="https://wa.me/256705007339" class="group flex flex-col items-center gap-3">
-                            <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#25D366] transition-all duration-300 shadow-lg group-hover:-translate-y-2">
-                                <i class="fa-brands fa-whatsapp text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
-                            </div>
-                            <span class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">+256 705 007 339</span>
-                        </a>
-                        <a href="mailto:kuriotesinvestments@gmail.com" class="group flex flex-col items-center gap-3">
-                            <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-collina-red transition-all duration-300 shadow-lg group-hover:-translate-y-2">
-                                <i class="fa-solid fa-envelope text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
-                            </div>
-                            <span class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">Email Us</span>
-                        </a>
-                    </div>
-                    <div class="mt-8 text-[10px] text-gray-500 uppercase tracking-widest">
-                        &copy; 2026 Kuriotes Investments Ltd. All rights reserved.
-                    </div>
+    <div class="glass-card rounded-3xl p-8 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-collina-red/5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <h2 class="text-2xl font-bold mb-2 relative z-10 text-white">Contact Us</h2>
+        <p class="text-gray-400 text-sm mb-6 relative z-10">Kuriotes Investments Ltd. <br> Ndundu Complex, Level 1 Room 1, Kisaasi Kyanja Road</p>
+        
+        <div class="flex flex-wrap justify-center gap-6 md:gap-10 relative z-10">
+            <a href="tel:+256782205952" class="group flex flex-col items-center gap-3">
+                <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-collina-green transition-all duration-300 shadow-lg group-hover:-translate-y-2">
+                    <i class="fa-solid fa-phone text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
                 </div>
-            </footer>
+                <span class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">+256 782 205 952</span>
+            </a>
+            <a href="https://wa.me/256705007339" class="group flex flex-col items-center gap-3">
+                <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#25D366] transition-all duration-300 shadow-lg group-hover:-translate-y-2">
+                    <i class="fa-brands fa-whatsapp text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                </div>
+                <span class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">+256 705 007 339</span>
+            </a>
+            <a href="mailto:kuriotesinvestments@gmail.com" class="group flex flex-col items-center gap-3">
+                <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-collina-red transition-all duration-300 shadow-lg group-hover:-translate-y-2">
+                    <i class="fa-solid fa-envelope text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                </div>
+                <span class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">Email Us</span>
+            </a>
+            
+            <a href="https://www.fb.com/l/6lp1kJRRR" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-3">
+                <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#1877F2] transition-all duration-300 shadow-lg group-hover:-translate-y-2">
+                    <i class="fa-brands fa-facebook-f text-2xl text-gray-300 group-hover:text-white transition-colors"></i>
+                </div>
+                <span class="text-xs font-bold text-gray-400 group-hover:text-white transition-colors">Facebook</span>
+            </a>
+            </div>
+        <div class="mt-8 text-[10px] text-gray-500 uppercase tracking-widest">
+            &copy; 2026 Kuriotes Investments Ltd. All rights reserved.
+        </div>
+    </div>
+</footer>
         </section>
 
         <section id="view-facts" class="hidden space-y-8 fade-up">
