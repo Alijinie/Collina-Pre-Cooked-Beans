@@ -320,63 +320,71 @@
         </div>
     </nav>
 
-    <div id="product-modal" class="fixed inset-0 z-50 hidden" aria-modal="true">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 opacity-0" id="modal-backdrop" onclick="closeModal()"></div>
+    <div id="product-modal" class="fixed inset-0 z-50 hidden flex items-end md:items-center justify-center sm:p-4" aria-modal="true">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity duration-300 opacity-0" id="modal-backdrop" onclick="closeModal()"></div>
+    
+    <div class="relative w-full md:w-[850px] max-h-[92vh] md:h-auto bg-collina-surface rounded-t-3xl md:rounded-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)] md:shadow-2xl transform transition-transform duration-300 translate-y-full md:translate-y-10 scale-95 opacity-0 flex flex-col md:flex-row overflow-hidden border border-white/10" id="modal-panel">
         
-        <div class="absolute bottom-0 md:top-1/2 md:left-1/2 md:bottom-auto md:-translate-x-1/2 md:-translate-y-1/2 w-full md:w-[800px] h-[85vh] md:h-auto bg-collina-surface md:rounded-3xl rounded-t-3xl shadow-2xl transform transition-transform duration-300 translate-y-full md:translate-y-10 scale-95 opacity-0 flex flex-col md:flex-row overflow-hidden border border-white/10" id="modal-panel">
+        <div class="relative w-full md:w-1/2 h-56 md:h-auto min-h-[220px] bg-gradient-to-br from-[#0a2e1c] to-[#05180e] flex items-center justify-center p-6 border-b md:border-b-0 md:border-r border-white/5 group">
             
-            <div class="relative h-64 md:h-auto md:w-5/12 bg-white/10 flex items-center justify-center p-4">
-                <img id="modal-img" src="" alt="Product" class="max-w-full max-h-full object-contain drop-shadow-2xl">
-                <button onclick="closeModal()" class="absolute top-4 right-4 md:hidden z-20 bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md">
-                    <i class="fa-solid fa-xmark"></i>
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-40 h-40 md:w-56 md:h-56 bg-collina-green/20 rounded-full blur-[50px] group-hover:bg-collina-green/30 transition-colors duration-700"></div>
+            </div>
+            
+            <img id="modal-img" src="" alt="Collina Pre-Cooked Beans" class="relative z-10 w-full h-full object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)] transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700 ease-out will-change-transform">
+            
+            <button onclick="closeModal()" class="absolute top-4 right-4 md:hidden z-20 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-md border border-white/10 transition-colors">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+        </div>
+        
+        <div class="w-full md:w-1/2 p-5 md:p-8 flex flex-col overflow-y-auto no-scrollbar">
+            
+            <div class="flex justify-between items-start mb-3">
+                <span id="modal-tag" class="text-[10px] font-bold tracking-widest bg-collina-red text-white px-2.5 py-1 rounded shadow-sm">READY TO USE</span>
+                
+                <button onclick="closeModal()" class="hidden md:flex text-gray-400 hover:text-white transition-colors hover:rotate-90 duration-300">
+                    <i class="fa-solid fa-xmark text-xl"></i>
                 </button>
             </div>
             
-            <div class="flex-1 p-6 md:p-10 flex flex-col h-full overflow-y-auto no-scrollbar">
-                <div class="flex justify-between items-start mb-2">
-                    <span id="modal-tag" class="text-[10px] font-bold tracking-widest bg-collina-red text-white px-2 py-1 rounded">READY TO USE</span>
-                    <button onclick="closeModal()" class="hidden md:flex text-gray-400 hover:text-white transition-colors">
-                        <i class="fa-solid fa-xmark text-xl"></i>
-                    </button>
+            <h2 id="modal-title" class="text-2xl md:text-3xl font-extrabold text-white mb-1 leading-tight">Product Title</h2>
+            <p id="modal-tagline" class="text-collina-yellow text-sm mb-5 font-medium opacity-90">More Flavour, Less Cooking</p>
+            
+            <div class="grid grid-cols-3 gap-2 md:gap-3 mb-6">
+                <div class="bg-white/5 rounded-xl p-3 text-center border border-white/5 hover:bg-white/10 transition-colors">
+                    <i class="fa-solid fa-clock text-collina-yellow mb-1.5 text-sm md:text-base"></i>
+                    <p id="stat-1" class="text-[10px] md:text-[11px] font-bold text-gray-200 uppercase tracking-wide">Zero Prep Time</p>
                 </div>
-                
-                <h2 id="modal-title" class="text-2xl md:text-3xl font-bold text-white mb-1">Product Title</h2>
-                <p id="modal-tagline" class="text-collina-yellow text-sm mb-6 font-medium">More Flavour, Less Cooking</p>
-                
-                <div class="grid grid-cols-3 gap-3 mb-6">
-                    <div class="bg-white/5 rounded-xl p-3 text-center border border-white/5">
-                        <i class="fa-solid fa-clock text-collina-yellow mb-1 text-sm"></i>
-                        <p id="stat-1" class="text-[11px] font-bold text-gray-200">Zero Prep Time</p>
-                    </div>
-                    <div class="bg-white/5 rounded-xl p-3 text-center border border-white/5">
-                        <i class="fa-solid fa-leaf text-collina-green mb-1 text-sm"></i>
-                        <p id="stat-2" class="text-[11px] font-bold text-gray-200">100% Natural</p>
-                    </div>
-                    <div class="bg-white/5 rounded-xl p-3 text-center border border-white/5">
-                        <i class="fa-solid fa-dumbbell text-collina-red mb-1 text-sm"></i>
-                        <p id="stat-3" class="text-[11px] font-bold text-gray-200">High Protein</p>
-                    </div>
+                <div class="bg-white/5 rounded-xl p-3 text-center border border-white/5 hover:bg-white/10 transition-colors">
+                    <i class="fa-solid fa-leaf text-collina-green mb-1.5 text-sm md:text-base"></i>
+                    <p id="stat-2" class="text-[10px] md:text-[11px] font-bold text-gray-200 uppercase tracking-wide">100% Natural</p>
                 </div>
-                
-                <div class="space-y-4 mb-8 text-sm text-gray-300 leading-relaxed">
-                    <div>
-                        <h3 class="text-white font-bold mb-1">Description</h3>
-                        <p id="modal-desc">Description text...</p>
-                    </div>
-                    <div>
-                        <h3 class="text-white font-bold mb-1">Ingredients</h3>
-                        <p id="modal-ingredients" class="text-xs text-gray-400">List...</p>
-                    </div>
+                <div class="bg-white/5 rounded-xl p-3 text-center border border-white/5 hover:bg-white/10 transition-colors">
+                    <i class="fa-solid fa-dumbbell text-collina-red mb-1.5 text-sm md:text-base"></i>
+                    <p id="stat-3" class="text-[10px] md:text-[11px] font-bold text-gray-200 uppercase tracking-wide">High Protein</p>
                 </div>
-                
-                <div class="mt-auto flex gap-4">
-                    <a href="https://wa.me/256782205952" class="flex-1 bg-gradient-to-r from-collina-green to-green-500 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all transform hover:-translate-y-1">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Order on WhatsApp
-                    </a>
+            </div>
+            
+            <div class="space-y-4 mb-6 text-sm text-gray-300 leading-relaxed flex-1">
+                <div>
+                    <h3 class="text-white font-bold mb-1 text-xs uppercase tracking-wider opacity-80">Description</h3>
+                    <p id="modal-desc">Description text...</p>
                 </div>
+                <div>
+                    <h3 class="text-white font-bold mb-1 text-xs uppercase tracking-wider opacity-80">Ingredients</h3>
+                    <p id="modal-ingredients" class="text-xs text-gray-400 bg-black/20 p-2.5 rounded-lg border border-white/5">List...</p>
+                </div>
+            </div>
+            
+            <div class="mt-auto pt-2">
+                <a href="https://wa.me/256782205952" class="w-full bg-collina-green hover:bg-green-500 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(34,197,94,0.3)] hover:shadow-[0_8px_25px_rgba(34,197,94,0.5)] transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Order on WhatsApp
+                </a>
             </div>
         </div>
     </div>
+</div>
 
     <script>
         // Data Store
